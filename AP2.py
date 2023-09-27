@@ -1,77 +1,78 @@
-#operasi aritmetika
+#percobaan 1 : membandingkan
 
-m = 82.0
-n = 26.0
-print("%.f + %.f = %.f" % (m, n, m+n))
-print("%.2f - %.2f = %.4f" % (m, n, m-n))
-print("%f x %f = %f" % (m, n, m*n))
-print("%f/%f = %f" % (m, n, m/n))
-print("%f/%f = %f (dibulatkan kebawah)" % (m, n, m//n))
-print("%f/%f (sisa hasil bagi) %f" % (m, n, m%n))
-print("(-) %f = %f" % (m,-m))
-print("%f^2 =%f" % (m,m**2))
-
-#operator pembanding
 m = 5.0
 n = 7.0
-print("m = n :" + str(m==n))
-print("m !== n : " +str(m!=n))
-print("m > n : "+ str(m>n))
-print("m < n : "+ str(m<n))
-print("m >= n : " +str(m>=n))
-print("m<=n : "+str(m<=n))
-
-# str berfungsi untuk memberikan penekanan bahwa tipe data didalamnya adalah string atau karakter
-#operator bitwise
-m = 10
-n = 5
-print("m and n : "+ str(m&n))
-print("m or n : "+ str(m|n))
-print("m XOR n : "+ str(m^n))
-print(" ~ n : " + str(~n))
-
-#operator logika
-l = 80
-m = 90
-n = 0
-
-print(" (m >= 1) and (m <= n) : " + str((m>=1) and (m<=n)))
-print(" (m >= 1) or (m <= n) : " + str((m>=1) or (m<=n)))
-print("not ((m>=1) and (m<=n)) : " + str(not((m>=1) and (m<=n))))
-
-#statement I/O
 '''
-tanyaTinggi = "Tinggi Anda?"
-print("Nama Anda?")
-nama = input()
-umur = input("Umur Anda?")
-tinggi = input(tanyaTinggi)
-print("Berat Anda?")
-berat = input()
+if (m==n):
+    print(str(m) +' sama dengan ' + str(n))
+else:
+    print(str(m) + " tidak sama dengan" + str(n))
+'''
+#percobaan 2
+''' 
+if(m==n):
+    print(str(m) +' sama dengan ' + str(n))
+elif(m != n):
+    print (str(m) + " tidak sama dengan " + str(n))
+elif(m > n):
+    print (str(m) + " lebih besar " + str(n))
+elif(m < n):
+    print (str(m) + " lebih kecil " + str(n))
+'''
+'''
+n = int(input('Masukkan nilai : '))
+if(n <= 100):
+    if(n>85):
+        print('Huruf mutu anda adalah A')
+    elif(n>75):
+        print('Huruf mutu anda adalah B')
+    elif(n>65):
+        print('Huruf mutu anda adalah C')
+    elif(n>55):
+        print('Huruf mutu anda adalah D')
+    elif(n<=55):
+        print('Huruf mutu anda adalah E')
+else: 
+    print('Nilai diluar jangkauan')
+'''
 
-print("Nama Anda adalah %s dan Anda berumur %s serta memiliki tinggi %s dan berat %s." % (nama, umur, tinggi, berat))
-#fungsi print untuk memberikan perintah untuk sistem menampilkan output
-#fungsi input untuk memberikan program masukkan dari user
-'''
-#tugas akhir modul AP-2
-'''
-1. Buatlah program untuk menghitung luas bangunan geometri trapesium. Ukuran dimensi bangunan didapat dari peranti masukan dan luas bangun ditampilkan sebagai keluaran. Berikan penjelasan!
-2. Buatlah program untuk menghitung pajak penghasilan (10%), inputkan nama, alamat, instansi gaji perbulan dan hitung pajak pertahun
-'''
-#1 menghitung luas trapesium
-'''
-a = int(input("Masukkan panjang atas : "))
-b = int(input("Masukkan panjang bawah :"))
-t = int(input("Masukkan tinggi :")) 
 
-l = (a+b)*t/2
-print("Luas trapesium :",l)
 '''
-#2 menghitung pajak penghasilan
+# tugas akhir pengondisian 1
+n  = int(input("Masukkan angka : "))
+if(n%2 == 0 and n>=0):
+    print("Angka %d adalah bilangan genap" % n)
+else:
+    a = n%2
+    print('Angka %d adalah bilangan ganjil. Dengan sisa pembagian %d' % (n, a))
+'''
 
-n = input("Nama : ")
-add = str(input('Alamat :'))
-paid = str(input("Gaji perbulan : "))
+jm = int(input('Jumlah mata kuliah : '))
+sks = int(input('Total SKS : '))
 
-pajak = 0.1*int(paid)
-print("Halo %s , pajak pertahun anda sebesar %s" % (n, pajak))
+matkul1 = float(input('Masukkan SKS Matkul 1 :'))
+matkul2 = float(input('Masukkan SKS Matkul 2 :'))
+matkul3 = float(input('Masukkan SKS Matkul 3 :'))
+
+nm1 = float(input('Masukkan nilai Matkul 1 :'))
+nm2 = float(input('Masukkan nilai Matkul 2 :'))
+nm3 = float(input('Masukkan nilai Matkul 3 :'))
+
+x = float(matkul1*nm1)
+y = float(matkul2*nm2)
+z = float(matkul3*nm3)
+
+tot = float((x+y+z)/sks)
+
+if(tot==4):
+    print("IP Anda adalah %.2f dengan mutu A" % tot)
+elif(2.5<tot<=3.5):
+    print('IP Anda adalah %.2f dengan mutu B' % tot)
+elif(1.5<tot<=2.5):
+    print('IP Anda adalah %.2f dengan mutu C' % tot)
+elif(1<tot<=1.5):
+    print("IP Anda adalah %.2f dengan mutu D" % tot)
+elif(tot<=1):
+    print("IP Anda adalah %.2f dengan mutu E" % tot)
+else:
+    print("Mohon maaf IP Anda tidak terdefinisi")
