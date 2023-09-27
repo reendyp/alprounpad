@@ -76,3 +76,13 @@ elif(tot<=1):
     print("IP Anda adalah %.2f dengan mutu E" % tot)
 else:
     print("Mohon maaf IP Anda tidak terdefinisi")
+
+#yang bener : permatkul
+nm1 = int(input('Masukkan nilai matkul 1 : '))
+sks = int(input('Masukkan jumlah SKS : '))
+
+
+if (total1<=100) : 
+    if (total1 > 85):
+        HM1 = 'A'
+        print("Matkul satu memiliki nilai %.2f dengan huruf mutu %s" % (total1, HM1))
