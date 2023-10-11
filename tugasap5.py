@@ -13,3 +13,10 @@ for i in range(n) :
     b = x
     fibonaci.append(x)
 print(fibonaci)
+
+A = [[2, 3], [9,1]]
+
+k = 100
+
+hasil = [[x * k for x in baris] for baris in A]
+print(hasil)
