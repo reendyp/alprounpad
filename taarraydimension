@@ -1,0 +1,65 @@
+#1 hitung determinan dan invers dari matriks berikut:
+import numpy as n
+
+
+# determinan matriks 
+'''
+
+A = n.array([[1,1,1],[0,2,5],[1,5,-1]])
+k = n.linalg.det(A)
+InversA = n.linalg.inv(A)
+print(A)
+print('\n Determinan Matriks adalah : %f' % k)
+print('\n Invers matriks = \n' , InversA)
+'''
+
+#2 hitung perkalian matriks menggunakan Python
+'''
+x = n.array([[2,4,1],[5,0,3],[6,2,4]])
+y = n.array([[1,2,4],[4,2,6],[0,3,1]])
+print('\n matriks x = \n', x)
+print('\n matriks y = \n', y)
+z = x.dot(y)
+print('\n Perkalian matriks x dan y adalah \n', z)
+'''
+
+#3 Pembuktian operasi pada perkalian matriks
+x = n.array([[2,4,1],[5,0,3],[6,2,4]])
+y = n.array([[1,2,4],[4,2,6],[0,3,1]])
+
+#a. Tidak Komutatif XY != YX
+'''z = x.dot(y)
+w = y.dot(x)
+'''
+print('\n matriks x = \n', x)
+print('\n matriks y = \n', y)
+'''
+print('\n Perkalian matriks x dan y adalah \n', z)
+print('\n Perkalian matriks y dan x adalah \n', w)
+'''
+
+#b. Asosiatif : (X.Y)K = X(Y.K)
+K = n.random.random ((3,3))
+print('\n matriks k = \n', K)
+'''
+a1 = x.dot(y)
+a2 = a1.dot(K)
+print('\n Perkalian matriks x.y dan k adalah \n', a2)
+'''
+'''
+a1 = x.dot(y)
+a3 = a1.dot(K)
+a2 = x.dot(y.dot(K))
+
+print('\n Perkalian matriks x.y dan k adalah \n', a3)
+print('\n Perkalian matriks x.y dan k adalah \n', a2)
+
+'''
+
+#c 
+z = y + K
+z1 = x.dot(z)
+
+w = x.dot(y)+x.dot(K)
+print('\n X(y+K) = \n' , z1)
+print('\n XY + XK = \n ', w)
